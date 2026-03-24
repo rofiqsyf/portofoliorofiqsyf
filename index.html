@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio pribadi mahasiswa Teknik Informatika - Profil, Skills, Proyek, dan Kontak">
+  <title>Portofolio | Rofiq Syaifurrohman</title>
+
+  <!-- Google Fonts: Sora (heading) + Nunito (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Skip link aksesibilitas -->
+  <a href="#main-content" class="skip-link">Langsung ke konten</a>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="site-header" id="top">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navigasi Utama">
+        <!-- Logo / Brand -->
+        <a href="#top" class="nav__logo" aria-label="Kembali ke atas halaman">OPIQ<span class="accent">.</span></a>
+
+        <!-- Hamburger toggle (mobile) -->
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka atau tutup menu navigasi">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Menu -->
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li><a href="#tentang"    class="nav__link">Tentang</a></li>
+          <li><a href="#skills"     class="nav__link">Skills</a></li>
+          <li><a href="#portofolio" class="nav__link">Portofolio</a></li>
+          <li><a href="#pengalaman" class="nav__link">Pengalaman</a></li>
+          <li><a href="#kontak"     class="nav__link nav__link--cta">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" aria-label="Pengenalan diri">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__greeting">Halo! Selamat Datang di Portofolio Saya</p>
+          <h1 class="hero__name">Rofiq Syaifurrohman</h1>
+          <p class="hero__tagline">Mahasiswa <strong>Teknik Informatika,</strong> dengan minat pada Web Development, UI/UX Design, dan Network. Berfokus pada pengembangan solusi digital yang fungsional dan estetis untuk menciptakan pengalaman pengguna yang optimal.</p>
+          <div class="hero__actions">
+            <a href="#portofolio" class="btn btn--primary">Lihat Proyek</a>
+            <a href="#kontak" class="btn btn--outline">Hubungi Saya</a>
+          </div>
+        </div>
+        <div class="hero__avatar">
+          <div class="avatar-wrapper" aria-hidden="true">
+            <!-- Foto profil B&W -->
+            <div class="avatar-frame">
+              <img
+                src="assets/photo-profile2.png"
+                alt="Foto profil Rofiq Syaifurrohman, mahasiswa Teknik Informatika"
+                class="avatar-photo"
+                onerror="this.style.display='none'; document.getElementById('avatar-svg-fallback').style.display='block';"
+              >
+              <!-- Fallback SVG portrait B&W -->
+              <svg id="avatar-svg-fallback" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" class="avatar-svg-portrait">
+                <defs>
+                  <filter id="grain">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+                    <feColorMatrix type="saturate" values="0"/>
+                    <feBlend in="SourceGraphic" mode="multiply" result="blend"/>
+                    <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+                  </filter>
+                  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e8e8e8"/>
+                    <stop offset="100%" stop-color="#c8c8c8"/>
+                  </linearGradient>
+                  <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#2a2a2a"/>
+                    <stop offset="100%" stop-color="#111111"/>
+                  </linearGradient>
+                  <linearGradient id="faceGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#d4c9b8"/>
+                    <stop offset="100%" stop-color="#b8a898"/>
+                  </linearGradient>
+                  <radialGradient id="shadowGrad" cx="50%" cy="100%" r="50%">
+                    <stop offset="0%" stop-color="rgba(0,0,0,0.2)"/>
+                    <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+                  </radialGradient>
+                  <clipPath id="frameClip">
+                    <rect width="300" height="360" rx="16" ry="16"/>
+                  </clipPath>
+                </defs>
+
+                <g clip-path="url(#frameClip)">
+                  <!-- Background -->
+                  <rect width="300" height="360" fill="url(#bgGrad)"/>
+
+                  <!-- Subtle texture overlay -->
+                  <rect width="300" height="360" fill="url(#bgGrad)" filter="url(#grain)" opacity="0.4"/>
+
+                  <!-- Ground shadow -->
+                  <ellipse cx="150" cy="355" rx="110" ry="18" fill="url(#shadowGrad)"/>
+
+                  <!-- Body / blazer -->
+                  <path d="M 45 360 Q 50 280 80 255 Q 105 240 130 235 L 150 260 L 170 235 Q 195 240 220 255 Q 250 280 255 360 Z" fill="url(#bodyGrad)"/>
+
+                  <!-- Collar/shirt white -->
+                  <path d="M 130 235 Q 140 248 150 260 Q 160 248 170 235 Q 158 230 150 233 Q 142 230 130 235 Z" fill="#f0f0f0"/>
+
+                  <!-- Neck -->
+                  <rect x="136" y="195" width="28" height="48" rx="12" fill="url(#faceGrad)"/>
+
+                  <!-- Head -->
+                  <ellipse cx="150" cy="170" rx="58" ry="68" fill="url(#faceGrad)"/>
+
+                  <!-- Hair — natural top -->
+                  <path d="M 94 148 Q 92 100 115 82 Q 135 68 150 66 Q 165 68 185 82 Q 208 100 206 148 Q 200 118 185 106 Q 168 95 150 93 Q 132 95 115 106 Q 100 118 94 148 Z" fill="#1a1a1a"/>
+                  <!-- Hair sides -->
+                  <path d="M 94 148 Q 90 135 92 120 Q 97 100 107 90 Q 97 110 96 130 Z" fill="#1a1a1a"/>
+                  <path d="M 206 148 Q 210 135 208 120 Q 203 100 193 90 Q 203 110 204 130 Z" fill="#1a1a1a"/>
+
+                  <!-- Ear left -->
+                  <ellipse cx="93" cy="172" rx="9" ry="12" fill="url(#faceGrad)"/>
+                  <!-- Ear right -->
+                  <ellipse cx="207" cy="172" rx="9" ry="12" fill="url(#faceGrad)"/>
+
+                  <!-- Eyes -->
+                  <ellipse cx="130" cy="168" rx="13" ry="9" fill="white"/>
+                  <ellipse cx="170" cy="168" rx="13" ry="9" fill="white"/>
+                  <circle cx="131" cy="169" r="6" fill="#2a2a2a"/>
+                  <circle cx="171" cy="169" r="6" fill="#2a2a2a"/>
+                  <circle cx="133" cy="167" r="2" fill="white"/>
+                  <circle cx="173" cy="167" r="2" fill="white"/>
+                  <!-- Eyebrows -->
+                  <path d="M 116 156 Q 129 150 143 154" stroke="#2a2a2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <path d="M 157 154 Q 171 150 184 156" stroke="#2a2a2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+                  <!-- Nose -->
+                  <path d="M 150 172 Q 145 183 140 188 Q 150 192 160 188 Q 155 183 150 172 Z" fill="rgba(0,0,0,0.08)"/>
+
+                  <!-- Mouth -->
+                  <path d="M 134 200 Q 150 210 166 200" stroke="#8a7060" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <path d="M 134 200 Q 150 205 166 200" fill="rgba(180,120,100,0.25)"/>
+
+                  <!-- Grain overlay for B&W film feel -->
+                  <rect width="300" height="360" fill="transparent" filter="url(#grain)" opacity="0.15"/>
+
+                  <!-- Vignette -->
+                  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+                    <stop offset="60%" stop-color="transparent"/>
+                    <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
+                  </radialGradient>
+                  <rect width="300" height="360" fill="url(#vignette)"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll hint -->
+      <div class="hero__scroll-hint" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- ===== TENTANG SECTION ===== -->
+    <section class="section" id="tentang" aria-labelledby="heading-tentang">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="heading-tentang" class="section__title">Tentang Saya</h2>
+          <p class="section__subtitle">Kenali saya lebih dekat</p>
+        </header>
+
+        <div class="about__grid">
+          <!-- Foto / Ilustrasi -->
+          <figure class="about__figure">
+            <img
+              src="assets/photo-full.jpg"
+              alt="Foto full Rofiq Syaifurrohman, mahasiswa Teknik Informatika"
+              class="about__photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
+            <!-- Fallback (jika foto belum ada) -->
+            <div class="about__photo-fallback" aria-hidden="true">
+              <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="abg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e0e0e0"/>
+                    <stop offset="100%" stop-color="#c0c0c0"/>
+                  </linearGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#abg)" rx="16"/>
+                <ellipse cx="150" cy="145" rx="62" ry="70" fill="#999"/>
+                <path d="M 50 400 Q 60 290 100 265 Q 130 250 150 255 Q 170 250 200 265 Q 240 290 250 400 Z" fill="#888"/>
+              </svg>
+            </div>
+          </figure>
+
+          <!-- Teks tentang -->
+          <article class="about__content">
+            <h3>Seorang Mahasiswa Ambisius</h3>
+            <p>Halo! Nama saya <strong>Rofiq Syaifurrohman</strong>, saya adalah mahasiswa semester <strong>4</strong> di Program Studi Teknik Informatika. Saya memiliki ketertarikan besar di bidang teknologi informasi, meliputi <em>Web Development</em>, UI/UX Design, dan Network.</p>
+            <p>Saya percaya bahwa belajar adalah proses tanpa henti. Setiap hari saya berusaha untuk mengembangkan diri, baik melalui perkuliahan, proyek pribadi, maupun eksplorasi mandiri.</p>
+
+            <ul class="about__info-list" role="list">
+              <li>
+                <span class="info__label">Nama</span>
+                <span class="info__value">Rofiq Syaifurrohman</span>
+              </li>
+              <li>
+                <span class="info__label">Program Studi</span>
+                <span class="info__value">Teknik Informatika</span>
+              </li>
+              <li>
+                <span class="info__label">Semester</span>
+                <span class="info__value">4 (Empat)</span>
+              </li>
+              <li>
+                <span class="info__label">NIM</span>
+                <span class="info__value">2024150032</span>
+              </li>
+              <li>
+                <span class="info__label">Asal</span>
+                <span class="info__value">Wonosobo, Jawa Tengah</span>
+              </li>
+              <li>
+                <span class="info__label">Email</span>
+                <span class="info__value"><a href="mailto:rofiqsyaifurrohman@gmail.com">rofiqsyaifurrohman@gmail.com</a></span>
+              </li>
+            </ul>
+
+            <a href="assets/cv-rofiq.pdf" class="btn btn--primary" download>
+              ⬇ Unduh CV
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section section--alt" id="skills" aria-labelledby="heading-skills">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="heading-skills" class="section__title">Kemampuan</h2>
+          <p class="section__subtitle">Teknologi yang saya kuasai</p>
+        </header>
+
+        <div class="skills__grid">
+
+          <!-- Kategori: Frontend -->
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">💻</div>
+            <h3 class="skill-card__title">Frontend</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <span class="skill-name">HTML5</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5: 90%">
+                  <div class="skill-bar__fill" style="--skill-pct: 90%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">CSS3</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3: 80%">
+                  <div class="skill-bar__fill" style="--skill-pct: 80%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 65%">
+                  <div class="skill-bar__fill" style="--skill-pct: 65%"></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Kategori: UI/UX Design -->
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">🎨</div>
+            <h3 class="skill-card__title">UI/UX Design</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <span class="skill-name">Figma</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Python: 70%">
+                  <div class="skill-bar__fill" style="--skill-pct: 70%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Sketch</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="PHP: 55%">
+                  <div class="skill-bar__fill" style="--skill-pct: 55%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Adobe XD</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL: 60%">
+                  <div class="skill-bar__fill" style="--skill-pct: 60%"></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Kategori: Network -->
+          <article class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">🌐</div>
+            <h3 class="skill-card__title">Network</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <span class="skill-name">Cisco</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Git dan GitHub: 75%">
+                  <div class="skill-bar__fill" style="--skill-pct: 75%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">MikroTik</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="VS Code: 85%">
+                  <div class="skill-bar__fill" style="--skill-pct: 85%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Fiber Optic</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Figma: 50%">
+                  <div class="skill-bar__fill" style="--skill-pct: 50%"></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTOFOLIO SECTION ===== -->
+    <section class="section" id="portofolio" aria-labelledby="heading-portofolio">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="heading-portofolio" class="section__title">Proyek Saya</h2>
+          <p class="section__subtitle">Beberapa karya yang telah saya buat</p>
+        </header>
+
+        <div class="projects__grid">
+
+          <!-- Proyek 1 -->
+          <article class="project-card">
+            <div class="project-card__img-wrap">
+              <img
+                src="assets/proyek-logo.png"
+                alt="Tampilan aplikasi web toko online sederhana dengan fitur keranjang belanja"
+                class="project-card__img"
+                onerror="this.style.display='none';"
+              >
+              <div class="project-card__img-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">CorelDRAW</span>
+                <span class="tag">Illustrator</span>
+                <span class="tag">Affinity</span>
+              </div>
+              <h3 class="project-card__title">Design Logo</h3>
+              <p class="project-card__desc">Merancang serta membuat logo yang representatif, estetis, dan konsisten dengan identitas.</p>
+              <div class="project-card__links">
+                <a href="https://instagram.com/rofiqsyf" class="btn btn--sm btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Lihat demo proyek Toko Online Sederhana">Demo</a>
+                <a href="https://github.com/rofiqsyf" class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer" aria-label="Lihat kode sumber Toko Online di GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 2 -->
+          <article class="project-card">
+            <div class="project-card__img-wrap">
+              <img
+                src="assets/proyek-uiux.png"
+                alt="Tampilan aplikasi to-do list dengan fitur tambah, hapus, dan tandai selesai"
+                class="project-card__img"
+                onerror="this.style.display='none';"
+              >
+              <div class="project-card__img-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Sketch</span>
+                <span class="tag">Adobe XD</span>
+              </div>
+              <h3 class="project-card__title">Mobile App UI/UX Design</h3>
+              <p class="project-card__desc">Perancangan tampilan aplikasi dan situs web yang menarik, informatif, serta mudah digunakan.</p>
+              <div class="project-card__links">
+                <a href="https://www.figma.com/proto/JQtPLt8XAiEqq4K9eXv0fE/Melati-Snack?node-id=30-323&p=f&t=ljS730D2JmtQ2MmI-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A391" class="btn btn--sm btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Lihat demo proyek To-Do List">Demo</a>
+                <a href="https://github.com/rofiqsyf" class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer" aria-label="Lihat kode sumber To-Do List di GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 3 -->
+          <article class="project-card">
+            <div class="project-card__img-wrap">
+              <img
+                src="assets/proyek-network.jpg"
+                alt="Tampilan dashboard visualisasi data akademik mahasiswa dengan grafik dan tabel"
+                class="project-card__img"
+                onerror="this.style.display='none';"
+              >
+              <div class="project-card__img-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">Mikrotik</span>
+                <span class="tag">Cisco</span>
+                <span class="tag">Network Equipment</span>
+              </div>
+              <h3 class="project-card__title">Network</h3>
+              <p class="project-card__desc">Proses pengaturan kebijakan, kontrol, dan aliran jaringan untuk memungkinkan komunikasi antara perangkat dan sistem.</p>
+              <div class="project-card__links">
+                <a href="https://mikrotik.com/" class="btn btn--sm btn--primary" target="_blank" rel="noopener noreferrer" aria-label="Lihat demo proyek Dashboard Akademik">Demo</a>
+                <a href="https://github.com/rofiqsyf" class="btn btn--sm btn--outline" target="_blank" rel="noopener noreferrer" aria-label="Lihat kode sumber Dashboard Akademik di GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PENGALAMAN SECTION (ASIDE + ARTICLE) ===== -->
+    <section class="section section--alt" id="pengalaman" aria-labelledby="heading-pengalaman">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="heading-pengalaman" class="section__title">Pengalaman & Pendidikan</h2>
+          <p class="section__subtitle">Perjalanan akademik dan organisasi saya</p>
+        </header>
+
+        <div class="experience__layout">
+          <!-- Kolom kiri: Timeline pengalaman -->
+          <div class="experience__main">
+            <h3 class="experience__group-title">🏫 Pendidikan</h3>
+            <ol class="timeline" role="list">
+              <li class="timeline__item">
+                <time class="timeline__year" datetime="2021">2021 – 2024</time>
+                <article class="timeline__card">
+                  <h4>SMK Negeri 1 Wonosobo</h4>
+                  <p class="timeline__place">Wonosobo, Jawa Tengah</p>
+                  <p>Jurusan Teknik Komputer dan Jaringan.</p>
+                </article>
+              </li>
+              <li class="timeline__item">
+                <time class="timeline__year" datetime="2024">2024 – Sekarang</time>
+                <article class="timeline__card">
+                  <h4>S1 Teknik Informatika</h4>
+                  <p class="timeline__place">Universitas Sains Al-Qur'an, Jawa Tengah</p>
+                  <p>Sedang menempuh pendidikan sarjana dengan fokus pada pemrograman web dan kecerdasan buatan. IPK saat ini: 3.85.</p>
+                </article>
+              </li>
+            </ol>
+
+            <h3 class="experience__group-title" style="margin-top: var(--space-8);">💼 Organisasi</h3>
+            <ol class="timeline" role="list">
+              <li class="timeline__item">
+                <time class="timeline__year" datetime="2024">2024 - 2025</time>
+                <article class="timeline__card">
+                  <h4>Pengurus Himpunan Mahasiswa Teknik Informatika</h4>
+                  <p class="timeline__place">Divisi PSDM</p>
+                  <p>Bertanggung jawab mengelola website himpunan dan mengadakan pelatihan pemrograman untuk anggota baru.</p>
+                </article>
+              </li>
+              <li class="timeline__item">
+                <time class="timeline__year" datetime="2024">2024 - Sekarang</time>
+                <article class="timeline__card">
+                  <h4>Pengurus Kamadiksi KIP-K Wonosobo</h4>
+                  <p class="timeline__place">Divisi MEDKRAF</p>
+                  <p>Bertanggung jawab mengelola website himpunan dan mengadakan pelatihan pemrograman untuk anggota baru.</p>
+                </article>
+              </li>
+              <li class="timeline__item">
+                <time class="timeline__year" datetime="2024">2025 - Sekarang</time>
+                <article class="timeline__card">
+                  <h4>Pengurus Wonosobo Literacy Club</h4>
+                  <p class="timeline__place">Divisi MEDKRAF</p>
+                  <p>Bertanggung jawab mengelola website himpunan dan mengadakan pelatihan pemrograman untuk anggota baru.</p>
+                </article>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Kolom kanan: Sidebar info tambahan -->
+          <aside class="experience__sidebar" aria-label="Informasi tambahan dan pencapaian">
+            <section class="sidebar-widget">
+              <h3 class="sidebar-widget__title">🏆 Pencapaian</h3>
+              <ul role="list">
+                <li>Ketua Panitia DiscoverIT 2025</li>
+                <li>Ketua Pelaksana AddClass Batch 2 Mobile Web Development 2025</li>
+                <li>Tim Riset Wonosobo Educational Forum (Pemantik Program Wonosobo Cita Asa 2026)</li>
+              </ul>
+            </section>
+
+            <section class="sidebar-widget">
+              <h3 class="sidebar-widget__title">📜 Sertifikasi</h3>
+              <ul role="list">
+                <li>Junior Graphic Designer – BNSP (2023)</li>
+                <li>Desainer Grafis Muda – BNSP (2024)</li>
+                <li>KKNI Level II Kompetensi KEahlian Teknik Komputer dan Jaringan – BNSP (2024)</li>
+              </ul>
+            </section>
+
+            <section class="sidebar-widget">
+              <h3 class="sidebar-widget__title">🌐 Bahasa</h3>
+              <ul role="list">
+                <li>Bahasa Indonesia – <em>Native</em></li>
+                <li>Bahasa Inggris – <em>Intermediate</em></li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK SECTION ===== -->
+    <section class="section" id="kontak" aria-labelledby="heading-kontak">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="heading-kontak" class="section__title">Hubungi Saya</h2>
+          <p class="section__subtitle">Ada pertanyaan atau ingin berkolaborasi? Kirim pesan!</p>
+        </header>
+
+        <div class="contact__layout">
+          <!-- Info kontak -->
+          <div class="contact__info">
+            <h3>Mari Terhubung</h3>
+            <p>Saya terbuka untuk diskusi, kolaborasi proyek, atau sekadar berbagi ide seputar teknologi. Jangan ragu untuk menghubungi saya!</p>
+
+            <address class="contact__address">
+              <ul role="list">
+                <li>
+                  <span aria-hidden="true">📧</span>
+                  <a href="mailto: rofiqsyaifurroham@gmail.com">rofiqsyaifurroham@gmail.com</a>
+                </li>
+                <li>
+                  <span aria-hidden="true">📱</span>
+                  <a href="tel:+6285878991811">+62 858 7899 1811</a>
+                </li>
+                <li>
+                  <span aria-hidden="true">📍</span>
+                  <span>Wonosobo, Jawa Tengah, Indonesia</span>
+                </li>
+              </ul>
+            </address>
+
+            <div class="contact__social">
+              <a href="https://github.com/rofiqsyf" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil GitHub saya">
+                <span aria-hidden="true">🐙</span> GitHub
+              </a>
+              <a href="https://linkedin.com/in/rofiq-syaifurrohman" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil LinkedIn saya">
+                <span aria-hidden="true">💼</span> LinkedIn
+              </a>
+              <a href="https://instagram.com/rofiqsyf" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil Instagram saya">
+                <span aria-hidden="true">📸</span> Instagram
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Kontak -->
+          <div class="contact__form-wrap">
+            <form class="contact-form" id="form-kontak" action="https://formspree.io/f/mdkarqkp" method="POST">
+              <fieldset>
+                <legend class="sr-only">Formulir pesan untuk menghubungi saya</legend>
+
+                <!-- Nama Lengkap (text) -->
+                <div class="form-group">
+                  <label for="nama" class="form-label required-field">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    class="form-input"
+                    placeholder="Masukkan nama lengkap Anda"
+                    required
+                    minlength="3"
+                    maxlength="100"
+                    autocomplete="name"
+                  >
+                  <span class="form-hint">Minimal 3 karakter</span>
+                </div>
+
+                <!-- Email (email) -->
+                <div class="form-group">
+                  <label for="email" class="form-label required-field">Alamat Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="nama@email.com"
+                    required
+                    autocomplete="email"
+                  >
+                </div>
+
+                <!-- Nomor HP (tel) -->
+                <div class="form-group">
+                  <label for="telepon" class="form-label">Nomor Telepon <span class="form-optional">(opsional)</span></label>
+                  <input
+                    type="tel"
+                    id="telepon"
+                    name="telepon"
+                    class="form-input"
+                    placeholder="08xx-xxxx-xxxx"
+                    pattern="[0-9\-\+\s]{10,15}"
+                    autocomplete="tel"
+                  >
+                  <span class="form-hint">Format: 08xx-xxxx-xxxx</span>
+                </div>
+
+                <!-- Topik (select) -->
+                <div class="form-group">
+                  <label for="topik" class="form-label required-field">Topik Pesan</label>
+                  <select id="topik" name="topik" class="form-input form-select" required>
+                    <option value="" disabled selected>-- Pilih topik --</option>
+                    <option value="kolaborasi">Kolaborasi Proyek</option>
+                    <option value="pertanyaan">Pertanyaan Umum</option>
+                    <option value="magang">Tawaran Magang</option>
+                    <option value="lainnya">Lainnya</option>
+                  </select>
+                </div>
+
+                <!-- Tanggal Pertemuan (date) -->
+                <div class="form-group">
+                  <label for="tanggal" class="form-label">Preferensi Tanggal Dihubungi <span class="form-optional">(opsional)</span></label>
+                  <input
+                    type="date"
+                    id="tanggal"
+                    name="tanggal"
+                    class="form-input"
+                    min="2025-01-01"
+                  >
+                </div>
+
+                <!-- Pesan (textarea) -->
+                <div class="form-group">
+                  <label for="pesan" class="form-label required-field">Pesan</label>
+                  <textarea
+                    id="pesan"
+                    name="pesan"
+                    class="form-input form-textarea"
+                    placeholder="Tuliskan pesan Anda di sini..."
+                    required
+                    minlength="20"
+                    rows="5"
+                  ></textarea>
+                  <span class="form-hint">Minimal 20 karakter</span>
+                </div>
+
+                <!-- Rating pengalaman (range) -->
+                <div class="form-group">
+                  <label for="rating" class="form-label">Seberapa urgent pesan ini? <span id="rating-value">5</span>/10</label>
+                  <input
+                    type="range"
+                    id="rating"
+                    name="urgency"
+                    class="form-range"
+                    min="1"
+                    max="10"
+                    value="5"
+                    aria-describedby="rating-desc"
+                  >
+                  <span id="rating-desc" class="form-hint">1 = Santai, 10 = Sangat mendesak</span>
+                </div>
+
+                <!-- Sumber (radio) -->
+                <div class="form-group">
+                  <fieldset class="form-fieldset">
+                    <legend class="form-label">Dari mana Anda mengenal saya?</legend>
+                    <div class="radio-group">
+                      <div class="radio-item">
+                        <input type="radio" id="src-google" name="sumber" value="google" class="form-radio">
+                        <label for="src-google">Google / Internet</label>
+                      </div>
+                      <div class="radio-item">
+                        <input type="radio" id="src-sosmed" name="sumber" value="sosmed" class="form-radio">
+                        <label for="src-sosmed">Media Sosial</label>
+                      </div>
+                      <div class="radio-item">
+                        <input type="radio" id="src-teman" name="sumber" value="teman" class="form-radio">
+                        <label for="src-teman">Rekomendasi Teman</label>
+                      </div>
+                      <div class="radio-item">
+                        <input type="radio" id="src-lain" name="sumber" value="lainnya" class="form-radio">
+                        <label for="src-lain">Lainnya</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <!-- Persetujuan (checkbox) -->
+                <div class="form-group">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="setuju" name="setuju" class="form-checkbox" required>
+                    <label for="setuju">
+                      Saya menyetujui bahwa data yang saya kirim akan digunakan hanya untuk keperluan komunikasi
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Tombol -->
+                <div class="form-actions">
+                  <button type="submit" class="btn btn--primary btn--full">Kirim Pesan →</button>
+                  <button type="reset" class="btn btn--outline">Reset</button>
+                </div>
+
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#top" class="footer__logo">OPIQ.<span class="accent">.</span></a>
+          <p>Mahasiswa Teknik Informatika — Berambisi menjadi ahli di bidang teknologi informasi.</p>
+        </div>
+
+        <!-- Navigasi Footer -->
+        <nav class="footer__nav" aria-label="Navigasi Footer">
+          <h4 class="footer__nav-title">Navigasi</h4>
+          <ul role="list">
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#pengalaman">Pengalaman</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <!-- Media Sosial -->
+        <div class="footer__social">
+          <h4 class="footer__nav-title">Media Sosial</h4>
+          <ul role="list">
+            <li><a href="https://github.com/rofiqsyf" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/rofiq-syaifurrohman" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://instagram.com/rofiqsyf" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p>&copy; <time datetime="2026">2026</time> Rofiq Syaifurrohman. Dibuat dengan ❤️ menggunakan HTML5 &amp; CSS3.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ---- Hamburger menu ----
+    const toggle = document.querySelector('.nav__toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function () {
+      const isOpen = navMenu.classList.toggle('nav__menu--open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.classList.toggle('nav__toggle--open', isOpen);
+    });
+
+    // Tutup menu saat link nav diklik
+    document.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('nav__menu--open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('nav__toggle--open');
+      });
+    });
+
+    // ---- Range input label update ----
+    const rangeInput = document.getElementById('rating');
+    const ratingValue = document.getElementById('rating-value');
+    if (rangeInput && ratingValue) {
+      rangeInput.addEventListener('input', function () {
+        ratingValue.textContent = this.value;
+      });
+    }
+
+    // ---- Header shadow on scroll ----
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('site-header--scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ---- Smooth reveal on scroll (IntersectionObserver) ----
+    const revealEls = document.querySelectorAll('.section, .project-card, .skill-card, .timeline__item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
